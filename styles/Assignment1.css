@@ -4,9 +4,9 @@ h2 {font-family: sans-serif; text-align: center;}
 
 #mainmenu {text-align: center;}
 
-#section1 {visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
+#section1 {visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; width: 400px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
 
-#section2 {visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
+#section2 {visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; width: 400px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
 
 #StLucia {width: 50%; height: 50%;}
 
