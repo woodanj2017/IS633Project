@@ -4,9 +4,9 @@ h2 {font-family: sans-serif; text-align: center;}
 
 #mainmenu {text-align: center;}
 
-#section1 {overflow: scroll; visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; width: 375px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
+#section1 {visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
 
-#section2 {overflow: scroll; visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; width: 375px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
+#section2 {visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
 
 #StLucia {width: 50%; height: 50%;}
 
@@ -15,3 +15,21 @@ h2 {font-family: sans-serif; text-align: center;}
 .areatext {padding-left: 25px; padding-right: 25px; padding-top: 10px; padding-bottom: 25px;}
 
 footer {text-align: center;}
+
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (orientation: portrait) {
+    #section1 {
+        width: 375px;
+    }
+}
+
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (orientation: landscape) {
+    #section1 {
+        width: 600px;
+    }
+}
