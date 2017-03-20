@@ -23,6 +23,9 @@ and (orientation: portrait) {
     #section1 {
         width: 375px;
     }
+    #section2 {
+        width: 375px;
+    }
 }
 
 @media only screen
@@ -32,4 +35,8 @@ and (orientation: landscape) {
     #section1 {
         width: 600px;
     }
+    #section2 {
+        width: 600px;
+    }
 }
+
