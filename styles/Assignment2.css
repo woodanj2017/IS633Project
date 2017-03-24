@@ -19,13 +19,13 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (orientation: portrait) {
     #section1 {
-        width: 375px;
+        width: 400px;
     }
     #section2 {
-        width: 375px;
+        width: 400px;
     }
     #section3 {
-        width: 375px;
+        width: 400px;
     }
 }
 
