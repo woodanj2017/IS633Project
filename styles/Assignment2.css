@@ -10,7 +10,7 @@ h2 {font-family: sans-serif; text-align: center;}
 
 #section3 {visibility: hidden; position: absolute; text-align: center; background-color: #B0C4DE; border: 2px solid black; border-radius: 25px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;}
 
-table, th, td {border: 1px solid black; background-color: #F5F5F5; text-align: center; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: 25px;} 
+table, th, td {border: 1px solid black; background-color: #F5F5F5; text-align: center; margin-left: 25px; margin-right: 25px; margin-top: auto; margin-bottom: 25px;} 
 
 footer {text-align: center;}
 
@@ -19,13 +19,13 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (orientation: portrait) {
     #section1 {
-        width: 400px;
+        width: 375px;
     }
     #section2 {
-        width: 400px;
+        width: 375px;
     }
     #section3 {
-        width: 400px;
+        width: 375px;
     }
 }
 
