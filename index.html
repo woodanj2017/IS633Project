@@ -28,7 +28,14 @@
     </section>
     <section id="section2">
         <h2>Customer Order History</h2>
-        <p id="orderhistorydisplay">Customer Order History</p>
+        <label class="inputprompt">Customer ID:</label>
+        <input type="text" id="custidinput" placeholder="ABCDE">
+        <br>
+        <br>
+        <button onclick="GetOrders()" id="custordersbutton">Get Order History</button>
+        <br>
+        <br>
+        <label id="orderhistorydisplay"></label>
     </section>
     <section id="section3">
         <h2>About this Application</h2>

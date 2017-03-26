@@ -72,11 +72,11 @@ function GetCustomersOutput(result)
     document.getElementById("customerlistdisplay").innerHTML = displaytable;
 }
 
-function GetOrders(customerid)
+function GetOrders()
 {
     var objRequest = new XMLHttpRequest();
     var url = "https://student.business.uab.edu/jsonwebservice/service1.svc/getCustomerOrderHistory/";
-    url += customerid;
+    url += document.getElementById("custidinput").value;
     objRequest.onreadystatechange = function()
     {
         if(objRequest.readyState == 4 && objRequest.status == 200)
@@ -99,6 +99,5 @@ function GetOrdersOutput(result)
     }
     displaytable += "</table>";
     document.getElementById("orderhistorydisplay").innerHTML = displaytable;
-    MenuChoice("Order History");
 }
 
