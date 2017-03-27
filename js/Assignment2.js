@@ -62,7 +62,7 @@ function GetCustomersOutput(result)
     for(count = 0;count < result.GetAllCustomersResult.length;count ++)
     {
         customerid = result.GetAllCustomersResult[count].CustomerID;
-        companyname = '<a href="javascript:GetOrders(' + "'" + customerid + "'):" + '">';
+        companyname = '<a href="javascript:Orders(' + "'" + customerid + "');" + '">';
         companyname += result.GetAllCustomersResult[count].CompanyName;
         companyname += '</a>';
         city = result.GetAllCustomersResult[count].City;
@@ -99,5 +99,35 @@ function GetOrdersOutput(result)
     }
     displaytable += "</table>";
     document.getElementById("orderhistorydisplay").innerHTML = displaytable;
+}
+
+function Orders(customerid)
+{
+    var objRequest = new XMLHttpRequest();
+    var url = "https://student.business.uab.edu/jsonwebservice/service1.svc/getCustomerOrderHistory/";
+    url += customerid;
+    objRequest.onreadystatechange = function()
+    {
+        if(objRequest.readyState == 4 && objRequest.status == 200)
+        {
+            var output = JSON.parse(objRequest.responseText);
+            OrdersOutput(output);
+        }
+    }
+    objRequest.open("GET", url, true);
+    objRequest.send();
+}
+
+function OrdersOutput(result)
+{
+    var displaytable = "<table><tr><th>Product Name</th><th>Total</th></tr>";
+    var count = 0;
+    for(count = 0;count < result.length;count ++)
+    {
+        displaytable += "<tr><td>" + result[count].ProductName + "</td><td>" + result[count].Total + "</td></tr>";
+    }
+    displaytable += "</table>";
+    document.getElementById("orderhistorydisplay").innerHTML = displaytable;
+    MenuChoice("Order History");
 }
 
