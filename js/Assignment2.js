@@ -131,3 +131,8 @@ function OrdersOutput(result)
     MenuChoice("Order History");
 }
 
+function GoBack()
+{
+    MenuChoice("Customers");
+}
+
