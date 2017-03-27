@@ -35,9 +35,17 @@ and (orientation: portrait) {
     #section3 {
         width: 375px;
     }
-    table, th, td {
+    #getcustomerstable {
         margin-left: 25px;
         margin-right: 25px;
+    }
+    #getorderstable {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #orderstable {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
