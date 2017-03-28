@@ -35,11 +35,11 @@ and (orientation: portrait) {
     #section3 {
         width: 375px;
     }
-    #customerlistdisplay {
+    #customerlistdisplay, th, td {
         margin-left: 25px;
         margin-right: 25px;
     }
-    #orderhistorydisplay {
+    #orderhistorydisplay, th, td {
         margin-left: auto;
         margin-right: auto;
     }
