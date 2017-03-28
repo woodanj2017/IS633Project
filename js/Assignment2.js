@@ -54,7 +54,7 @@ function GetCustomers()
 
 function GetCustomersOutput(result)
 {
-    var displaytable = "<table id="getcustomerstable"><tr><th>Customer ID</th><th>Company Name</th><th>City</th></tr>";
+    var displaytable = "<table><tr><th>Customer ID</th><th>Company Name</th><th>City</th></tr>";
     var count = 0;
     var customerid = "";
     var companyname = "";
@@ -91,7 +91,7 @@ function GetOrders()
 
 function GetOrdersOutput(result)
 {
-    var displaytable = "<table ="getorderstable"><tr><th>Product Name</th><th>Total</th></tr>";
+    var displaytable = "<table><tr><th>Product Name</th><th>Total</th></tr>";
     var count = 0;
     for(count = 0;count < result.length;count ++)
     {
@@ -120,7 +120,7 @@ function Orders(customerid)
 
 function OrdersOutput(result)
 {
-    var displaytable = "<table id="orderstable"><tr><th>Product Name</th><th>Total</th></tr>";
+    var displaytable = "<table><tr><th>Product Name</th><th>Total</th></tr>";
     var count = 0;
     for(count = 0;count < result.length;count ++)
     {
