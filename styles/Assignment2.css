@@ -34,8 +34,7 @@ and (orientation: portrait) {
         width: 375px;
     }
     table, th, td {
-        margin-left: 25px;
-        margin-right: 25px;
+        width: 364px;
     }
     p {
         margin-left: 25px;
