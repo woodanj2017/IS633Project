@@ -58,8 +58,9 @@ and (orientation: landscape) {
         width: 600px;
     }
     table, th, td {
-        margin-left: auto;
-        margin-right: auto;
+        width: 550px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
     p {
         margin-left: 25px;
