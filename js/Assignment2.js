@@ -106,6 +106,9 @@ function Orders(customerid)
     var objRequest = new XMLHttpRequest();
     var url = "https://student.business.uab.edu/jsonwebservice/service1.svc/getCustomerOrderHistory/";
     url += customerid;
+    var input = document.getElementById("custidinput");
+    input.value = "";
+    document.getElementById("menu").selectedIndex = "2";
     objRequest.onreadystatechange = function()
     {
         if(objRequest.readyState == 4 && objRequest.status == 200)
@@ -134,5 +137,6 @@ function OrdersOutput(result)
 function GoBack()
 {
     MenuChoice("Customers");
+    document.getElementById("menu").selectedIndex = "1";
 }
 
