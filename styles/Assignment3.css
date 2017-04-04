@@ -29,7 +29,7 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (orientation: portrait) {
     #section1 {
-        width: 475px;
+        width: 375px;
     }
     #section2 {
         width: 375px;
