@@ -28,6 +28,26 @@ footer {text-align: center;}
 and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (orientation: portrait) {
+    #section1 {
+        width: 475px;
+    }
+    #section2 {
+        width: 375px;
+    }
+    #section3 {
+        width: 375px;
+    }
+    #section4 {
+        width: 375px;
+    }
+    #section5 {
+        width: 375px;
+    }
+    table, th, td {
+        width: 325px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
     p {
         margin-left: 25px;
         margin-right: 25px
