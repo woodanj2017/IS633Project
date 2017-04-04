@@ -274,9 +274,6 @@ function UpdateOrderInfo()
         if(objRequest.readyState == 4 && objRequest.status == 200)
         {
             var result = JSON.parse(objRequest.responseText);
-//            var outcome = result.WasSuccessful;
-//            var error = result.Exception;
-//            UpdateOrderInfoResult(outcome, error);
             console.log(result);
             UpdateOrderInfoResult(result);
             MenuChoice("Customers");
@@ -288,10 +285,8 @@ function UpdateOrderInfo()
     objRequest.send(parameters);
 }
 
-//function UpdateOrderInfoResult(success, exception)
 function UpdateOrderInfoResult(result)
 {
-//    switch(success)
     switch(result)
     {
         case 1:
