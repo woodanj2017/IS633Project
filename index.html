@@ -3,8 +3,8 @@
 <html>
 <head>
     <title>Andrew Wood - Assignment 2</title>
-    <link rel="stylesheet" type="text/css" href="styles/Assignment2.css"/>
-    <script src="js/Assignment2.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/Assignment3.css"/>
+    <script src="js/Assignment3.js"></script>
 </head>
 
 <body>
@@ -19,6 +19,8 @@
             <option value="None">Please Select an Option</option>
             <option value="Customers">Customers</option>
             <option value="Order History">Order History</option>
+            <option value="Current Orders">Current Orders</option>
+            <option value="Update Order Info">Update Order Info</option>
             <option value="About">About</option>
         </select>
     </section>
@@ -39,10 +41,46 @@
         <label id="orderhistorydisplay"></label>
     </section>
     <section id="section3">
+        <h2>Customer's Current Orders</h2>
+        <label id="custid2" class="inputprompt">Customer ID:</label>
+        <input type="text" id="custidinput2" placeholder="ABCDE">
+        <br>
+        <br>
+        <button onclick="GetCurrentOrders()" id="custcurrentordersbutton">Get Current Orders</button>
+        <button onclick="GoBack()" id="backtocustlist2">Return to Customers</button>
+        <br>
+        <br>
+        <label id="customercurrentordersdisplay"></label>
+    </section>
+    <section id="section4">
+        <h2>Update Order Information</h2>
+        <label class="inputprompt">Order ID:</label>
+        <input type="text" id="orderid">
+        <br>
+        <label class="inputprompt">Ship Address:</label>
+        <input type="text" id="shipaddress">
+        <br>
+        <label class="inputprompt">Ship City:</label>
+        <input type="text" id="shipcity">
+        <br>
+        <label class="inputprompt">Ship Name:</label>
+        <input type="text" id="shipname">
+        <br>
+        <label class="inputprompt">Ship Post Code:</label>
+        <input type="text" id="shippostcode">
+        <br>
+        <br>
+        <button onclick="UpdateOrderInfo()">Update Order Info</button>
+        <br>
+        <br>
+    </section>
+    <section id="section5">
         <h2>About this Application</h2>
         <p>Selecting the "Customer" menu option will return a list of customers including the customer ID, company name, and city.</p>
         <p>Selecting the "Order History" menu option allows you to access a list of products ordered by a particular customer by entering<br> the customer ID.</p>
-        <p>You can also access a customer's order history by clicking the link for each company name in the customer list.</p>
+        <p>You can access a customer's order history by clicking the link for each company name in the customer list.</p>
+        <p>You can also access a a customer's current orders by clicking "Current Orders" button for a particular customer in the customer list.</p>
+        <p>You can update the information for a particular order by clicking the "Update Order" button in the current orders list for a particular customer.</p>
         <p>This application was developed by Andrew Wood.</p>
     </section>
     <footer>
