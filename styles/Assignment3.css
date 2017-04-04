@@ -45,8 +45,8 @@ and (orientation: portrait) {
     }
     table, th, td {
         width: 325px;
-        margin-left: 25px;
-        margin-right: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     p {
         margin-left: 25px;
