@@ -3,8 +3,8 @@
 <html>
 <head>
     <title>Andrew Wood - Assignment 2</title>
-    <link rel="stylesheet" type="text/css" href="styles/Assignment3.css"/>
-    <script src="js/Assignment3.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/Assignment4.css"/>
+    <script src="js/Assignment4.js"></script>
 </head>
 
 <body>
@@ -18,6 +18,7 @@
         <select onchange="MenuChoice(value)" id="menu">
             <option value="None">Please Select an Option</option>
             <option value="Customers">Customers</option>
+            <option value="Add Customer">Add Customer</option>
             <option value="Order History">Order History</option>
             <option value="Current Orders">Current Orders</option>
             <option value="Update Order Info">Update Order Info</option>
@@ -26,6 +27,9 @@
     </section>
     <section id="section1">
         <h2>Customers</h2>
+        <button onclick="GoToAddCustomer()" id="gotoaddcustomerbutton">Add New Customer</button>
+        <br>
+        <br>
         <label id="customerlistdisplay"></label>
     </section>
     <section id="section2">
@@ -75,6 +79,22 @@
         <br>
     </section>
     <section id="section5">
+        <h2>Add Customer</h2>
+        <label class="inputprompt">Customer ID:</label>
+        <input type="text" id="customerid" pattern="[A-Z]{5}" maxlength="5">
+        <br>
+        <label class="inputprompt">Company Name:</label>
+        <input type="text" id="companyname">
+        <br>
+        <label class="inputprompt">Customer City:</label>
+        <input type="text" id="customercity">
+        <br>
+        <br>
+        <button onclick="AddCustomer()">Add Customer</button>
+        <br>
+        <br>
+    </section>
+    <section id="section6">
         <h2>About this Application</h2>
         <p>Selecting the "Customer" menu option will return a list of customers including the customer ID, company name, and city.</p>
         <p>Selecting the "Order History" menu option allows you to access a list of products ordered by a particular customer by entering<br> the customer ID.</p>
