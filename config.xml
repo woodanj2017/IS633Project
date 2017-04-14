@@ -20,5 +20,6 @@
 <preference name="phonegap-version" value="cli-6.5.0" />
 <plugin name="cordova-plugin-whitelist" source="npm" />
 <access origin="*" />
+<plugin name="cordova-plugin-gelocation" source="npm" />
 
 </widget>

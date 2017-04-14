@@ -2,14 +2,14 @@
 
 <html>
 <head>
-    <title>Andrew Wood - Assignment 2</title>
-    <link rel="stylesheet" type="text/css" href="styles/Assignment4.css"/>
-    <script src="js/Assignment4.js"></script>
+    <title>Andrew Wood - Assignment 5</title>
+    <link rel="stylesheet" type="text/css" href="styles/Assignment5.css"/>
+    <script src="js/Assignment5.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Andrew Wood - Assignment 1</h1>
+        <h1>Andrew Wood - Assignment 5</h1>
     </header>
     <hr>
     <section id="mainmenu">
@@ -22,6 +22,7 @@
             <option value="Order History">Order History</option>
             <option value="Current Orders">Current Orders</option>
             <option value="Update Order Info">Update Order Info</option>
+            <option value="Geolocation">Geolocation</option>
             <option value="About">About</option>
         </select>
     </section>
@@ -95,6 +96,19 @@
         <br>
     </section>
     <section id="section6">
+        <h2>Geolocation</h2>
+        <button onclick="Location()">Find Current Location</button>
+        <br>
+        <br>
+        <label class="inputprompt">Latitude:</label>
+        <input type="number" id="latitude" disabled="true">
+        <br>
+        <label class="inputprompt">Longitude:</label>
+        <input type="number" id="longitude" disabled="true">
+        <br>
+        <br>
+    </section>
+    <section id="section7">
         <h2>About this Application</h2>
         <p>Selecting the "Customer" menu option will return a list of customers including the customer ID, company name, and city.</p>
         <p>Selecting the "Order History" menu option allows you to access a list of products ordered by a particular customer by entering<br> the customer ID.</p>
