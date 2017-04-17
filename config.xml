@@ -23,7 +23,7 @@
 <plugin name="cordova-plugin-geolocation" source="npm" />
 <platform name="ios">
     <icon src="images/AppIcon.png" width="180" height="180" />
-    <splash src="splash.png" width="1242" height="2208" />
+    <splash src="images/SplashScreen-Portrait.png" width="1242" height="2208" />
     <splash src="splash.png" width="2208" height="1242" />
 </platform>
 <preference name="SplashScreenDelay" value="3000" />
