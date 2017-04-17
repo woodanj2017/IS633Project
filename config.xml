@@ -26,5 +26,6 @@
     <splash src="splash.png" width="1242" height="2208" />
     <splash src="splash.png" width="2208" height="1242" />
 </platform>
+<preference name="SplashScreenDelay" value="3000" />
 
 </widget>
