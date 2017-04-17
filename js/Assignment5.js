@@ -449,12 +449,12 @@ function showPosition(position)
 {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    var mapurl = "http://maps.google.com/maps/api/staticmap?center=";
-    mapurl = mapurl + latitude + "," + longitude;
-    mapurl = mapurl + '&zoom=15&size=512x512&maptype=roadmap&sensor=true&markers=color:blue%7Clabel:A%7C';
-    mapurl = mapurl + latitude + "," + longitude;
-    var imgElement = document.getElementById("static-map");
-    imgElement.src = mapurl;
+ //   var mapurl = "http://maps.google.com/maps/api/staticmap?center=";
+ //   mapurl = mapurl + latitude + "," + longitude;
+ //   mapurl = mapurl + '&zoom=15&size=512x512&maptype=roadmap&sensor=true&markers=color:blue%7Clabel:A%7C';
+ //   mapurl = mapurl + latitude + "," + longitude;
+ //   var imgElement = document.getElementById("static-map");
+ //   imgElement.src = mapurl;
     document.getElementById("latitude").innerHTML = latitude;
     document.getElementById("longitude").innerHTML = longitude;
 }
