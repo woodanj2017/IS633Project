@@ -447,14 +447,17 @@ function Location()
 
 function showPosition(position)
 {
+    var latitudelabel = "Latitude: " + position.coords.latitude;
+    var longitudelabel = "Longitude: " + position.coords.longitude;
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
     var mapurl = "http://maps.google.com/maps/api/staticmap?center=";
     mapurl = mapurl + latitude + "," + longitude;
     mapurl = mapurl + '&zoom=15&size=512x512&maptype=roadmap&sensor=true&markers=color:blue%7Clabel:A%7C';
     mapurl = mapurl + latitude + "," + longitude;
+    mapurl = mapurl + '&key=AIzaSyCBPozFo_zT8y8fL-S18qHHJqzhHqd27vw';
     var imgElement = document.getElementById("static-map");
     imgElement.src = mapurl;
-    document.getElementById("latitude").innerHTML = latitude;
-    document.getElementById("longitude").innerHTML = longitude;
+    document.getElementById("latitude").innerHTML = latitudelabel;
+    document.getElementById("longitude").innerHTML = longitudelabel;
 }
