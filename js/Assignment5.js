@@ -447,6 +447,12 @@ function Location()
 
 function showPosition(position)
 {
+    document.getElementById("latitude").style.visibility = "visible";
+    document.getElementById("latitude").style.display = "block";
+    document.getElementById("longitude").style.visibility = "visible";
+    document.getElementById("longitude").style.display = "block";
+    document.getElementById("static-map").style.visibility = "visible";
+    document.getElementById("static-map").style.display = "block";
     var latitudelabel = "Latitude: " + position.coords.latitude;
     var longitudelabel = "Longitude: " + position.coords.longitude;
     var latitude = position.coords.latitude;
