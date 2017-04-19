@@ -26,6 +26,11 @@
     <splash src="images/SplashScreen-Portrait-736h@3x.png" width="1242" height="2208" />
     <splash src="images/SplashScreen-Landscape-736h@3x.png" width="2208" height="1242" />
 </platform>
+<platform name="android">
+    <icon src="images/AppIcon.png" />
+    <splash src="images/SplashScreenPort.png" density="port-mdpi" />
+    <splash src="images/SplashScreenLand.png" density="land-mdpi" />
+</platform>
 <preference name="SplashScreenDelay" value="3000" />
 
 </widget>
