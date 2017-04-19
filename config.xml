@@ -28,8 +28,8 @@
 </platform>
 <platform name="android">
     <icon src="images/AppIcon.png" />
-    <splash src="images/SplashScreenPort.png" density="port-mdpi" />
-    <splash src="images/SplashScreenLand.png" density="land-mdpi" />
+    <splash src="images/SplashScreenPort.png" qualifier="port-mdpi" />
+    <splash src="images/SplashScreenLand.png" qualifier="land-mdpi" />
 </platform>
 <preference name="SplashScreenDelay" value="3000" />
 
