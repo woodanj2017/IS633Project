@@ -36,7 +36,7 @@ table, th, td {border: 1px solid black; background-color: #F5F5F5; text-align: c
 
 #static-map {visibility: hidden; display: none; margin-top: 25px; margin-bottom: 25px;}
 
-#snapshot {height: 200px; width: 200px;}
+#snapshot {height: 75%; width: 75%;}
 
 footer {text-align: center;}
 
