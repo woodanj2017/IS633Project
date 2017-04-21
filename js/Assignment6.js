@@ -500,3 +500,31 @@ function onFail(message)
 {
     alert("Failed because: " + message);
 }
+
+function PickContact()
+{
+    navigator.contacts.pickContact(function(contact)
+        {
+            var contactinfo = "";
+            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
+            var count = 0;
+            if(contact.phoneNumbers !== null)
+            {
+                for(count=0; count < contact.phoneNumbers.length; count++)
+                {
+                    contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
+                }
+            }
+            if(contact.emails !== null)
+            {
+                for(count=0; count < contact.emails.length; count++)
+                {
+                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
+                }
+            }
+            document.getElementById("contactname").innerHTML = contactinfo;
+        }, function(err)
+           {
+            alert("Error: " + err);
+           });
+}
