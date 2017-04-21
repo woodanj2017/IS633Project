@@ -2,14 +2,29 @@
 
 <html>
 <head>
-    <title>Andrew Wood - Assignment 5</title>
-    <link rel="stylesheet" type="text/css" href="styles/Assignment5.css"/>
-    <script src="js/Assignment5.js"></script>
+    <title>Andrew Wood - Assignment 6</title>
+    <link rel="stylesheet" type="text/css" href="styles/Assignment6.css"/>
+    <script src="js/Assignment6.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script>
+        var objContact;
+        var picturesource;
+        var destinationtype;
+        
+        document.addEventListener("deviceready",onDeviceReady,false);
+        
+        function onDeviceReady()
+        {
+            picturesource = navigator.camera.PictureSourceType;
+            destinationtype = navigator.camera.DestinationType;
+            objContact = navigator.contacts.create();
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <h1>Andrew Wood - Assignment 5</h1>
+        <h1>Andrew Wood - Assignment 6</h1>
     </header>
     <hr>
     <section id="mainmenu">
@@ -23,6 +38,8 @@
             <option value="Current Orders">Current Orders</option>
             <option value="Update Order Info">Update Order Info</option>
             <option value="Geolocation">Geolocation</option>
+            <option value="Camera">Take a Picture</option>
+            <option value="Contact List">Access Contacts</option>
             <option value="About">About</option>
         </select>
     </section>
@@ -105,6 +122,23 @@
         <img id="static-map" class="mfnottransform"/>
     </section>
     <section id="section7">
+        <h2>Take a Picture</h2>
+        <button onclick="CapturePhoto()">Take Picture</button>
+        <br>
+        <br>
+        <img id="snapshot" src="" />
+    </section>
+    <section id="section8">
+        <h2>Contact List</h2>
+        <button onclick="PickContact()">Pick a Contact</button>
+        <br>
+        <br>
+        <label class="inputprompt">Contact Name:</label>
+        <input type="text" id="contactname">
+        <br>
+        <br>
+    </section>
+    <section id="section9">
         <h2>About this Application</h2>
         <p>Selecting the "Customer" menu option will return a list of customers including the customer ID, company name, and city.</p>
         <p>Selecting the "Order History" menu option allows you to access a list of products ordered by a particular customer by entering<br> the customer ID.</p>

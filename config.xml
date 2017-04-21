@@ -35,5 +35,7 @@
     <splash src="images/SplashScreenLand.png" qualifier="land-mdpi" />
 </platform>
 <preference name="SplashScreenDelay" value="3000" />
+<plugin name="cordova-plugin-camera" source="npm" />
+<plugin name="cordova-plugin-contacts" source="npm" />
 
 </widget>
