@@ -508,7 +508,7 @@ function PickContact()
     navigator.contacts.pickContact(function(contact)
         {
             var contactinfo = "";
-            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
+            contactinfo += "Contact Name: " + contact.name.givenName + " " + contact.name.familyName + "<br>";
             var count = 0;
             if(contact.phoneNumbers !== null)
             {
@@ -525,7 +525,7 @@ function PickContact()
                 }
             }
             document.getElementById("contactname").style.visibility = "visible";
-            document.getElementById("contactname").innerHTML = "Contact Name: " + contactinfo;
+            document.getElementById("contactname").innerHTML = contactinfo;
         }, function(err)
            {
             alert("Error: " + err);
