@@ -536,7 +536,7 @@ function SearchContacts()
 {
     navigator.contacts.find(function(contact)
         {
-            var options = new ContactFindOption();
+            var options = new ContactFindOptions();
             optionsFilter = document.getElementById("contactlastname").value;
             options.multiple = true;
             options.desiredFields = [navigator.contacts.fieldType.id];
