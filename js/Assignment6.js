@@ -538,7 +538,8 @@ function SearchContacts()
         {
             var options = new ContactFindOptions();
             options.filter = document.getElementById("contactlastname").value;
-            options.contactFields = navigator.contacts.fieldType.familyName;
+            options.multiple = true;
+            options.desiredFields = [navigator.contacts.fieldType.familyName];
             var contactinfo = "Contact Name: ";
             contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
             var count = 0;
