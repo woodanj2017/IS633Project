@@ -531,3 +531,17 @@ function PickContact()
             alert("Error: " + err);
            });
 }
+
+function SearchContacts()
+{
+    navigator.contacts.find(function(contact)
+        {
+            var options = new ContactFindOption();
+            optionsFilter = document.getElementById("contactlastname").value;
+            options.multiple = true;
+            options.desiredFields = [navigator.contacts.fieldType.id];
+            options.hasPhoneNumber = true;
+            var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
+            document.getElementById("contactsearchresults").innerHTML = fields;
+        });
+}
