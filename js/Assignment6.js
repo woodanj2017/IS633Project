@@ -548,7 +548,7 @@ function onSuccess(contacts)
     var count = 0;
     for(count=0; count<contacts.length; count++)
     {
-        contactinfo += contacts.fieldType.givenName[count].value + " " + contacts.fieldType.familyName[count].value;
+        contactinfo += contacts.givenName[count].value + " " + contacts.familyName[count].value;
     }
     document.getElementById("contactsearchresults").innerHTML = contactinfo;
 }
