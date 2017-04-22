@@ -537,11 +537,29 @@ function SearchContacts()
     navigator.contacts.find(function(contact)
         {
             var options = new ContactFindOptions();
-            optionsFilter = document.getElementById("contactlastname").value;
-            options.multiple = true;
-            options.desiredFields = [navigator.contacts.fieldType.id];
-            options.hasPhoneNumber = true;
-            var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
-            document.getElementById("contactsearchresults").innerHTML = fields;
-        });
+            options.filter = document.getElementById("contactlastname").value;
+            options.contactFields = navigator.contacts.fieldType.familyName;
+            var contactinfo = "Contact Name: ";
+            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
+            var count = 0;
+            if(contact.phoneNumbers !== null)
+            {
+                for(count=0; count < contact.phoneNumbers.length; count++)
+                {
+                    contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
+                }
+            }
+            if(contact.emails !== null)
+            {
+                for(count=0; count < contact.emails.length; count++)
+                {
+                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
+                }
+            }
+//            document.getElementById("contactname").style.visibility = "visible";
+            document.getElementById("contactsearchresults").innerHTML = contactinfo;
+        }, function(err)
+           {
+            alert("Error: " + err);
+           });
 }
