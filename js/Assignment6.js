@@ -544,13 +544,13 @@ function SearchContacts()
 
 function onSuccess(contacts)
 {
-    var contactinfo = "Contact Name: ";
-    var count = 0;
-    for(count=0; count<contacts.length; count++)
+    for(var count=0; count<contacts.length; count++)
     {
-        contactinfo += contacts.givenName[count].value + " " + contacts.familyName[count].value;
+        for(var subcount=0; subcount<contacts[count].familyName.length; subcount++)
+        {
+            alert("Contact Name: " + contacts[count].givenName[subcount].value + " " + contacts[count].familyName[subcount].value);
+        }
     }
-    document.getElementById("contactsearchresults").innerHTML = contactinfo;
 }
 
 function onError(contactError)
