@@ -537,7 +537,7 @@ function SearchContacts()
     navigator.contacts.find(function(contact)
         {
             var options = new ContactFindOptions();
-            options.filter = document.getElementById("contactlastname").value;
+            options.filter = "Aldridge";
             options.multiple = true;
             options.desiredFields = [navigator.contacts.fieldType.familyName];
             var contactinfo = "Contact Name: ";
