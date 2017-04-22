@@ -525,7 +525,9 @@ function PickContact()
                 }
             }
             document.getElementById("contname").style.visibility = "visible";
+            document.getElementById("contname").style.display = "inline-block";
             document.getElementById("contactname").style.visibility = "visible";
+            document.getElementById("contactname").style.display = "block";
             document.getElementById("contactname").innerHTML = contactinfo;
         }, function(err)
            {
