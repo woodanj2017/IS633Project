@@ -537,8 +537,8 @@ function SearchContacts()
     var options = new ContactFindOptions();
     options.filter = "Aldridge";
     options.multiple = true;
-    options.desiredFields = ["familyName", "phoneNumbers"];
-    var fields = ["familyName", "phoneNumbers"];
+    options.desiredFields = [navigator.contacts.fieldType.familyName];
+    var fields = [navigator.contacts.fieldType.familyName];
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
