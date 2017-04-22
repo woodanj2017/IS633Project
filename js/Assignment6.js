@@ -537,14 +537,20 @@ function SearchContacts()
     var options = new ContactFindOptions();
     options.filter = "Aldridge";
     options.multiple = true;
-    options.desiredFields = [navigator.contacts.fieldType.id];
+    options.desiredFields = [navigator.contacts.fieldType.givenName, navigator.contacts.fieldType.familyName];
     var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
 function onSuccess(contacts)
 {
-    alert('Found ' + contacts.length + ' contacts.');
+    var contactinfo = "Contact Name: ";
+    var count = 0;
+    for(count=0; count<contacts.length; count++)
+    {
+        contactinfo += contacts.fieldType.givenName[count].value + " " + contacts.fieldType.familyName[count].value;
+    }
+    document.getElementById("contactsearchresults").innerHTML = contactinfo;
 }
 
 function onError(contactError)
