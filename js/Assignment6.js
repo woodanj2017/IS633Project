@@ -507,8 +507,8 @@ function PickContact()
 {
     navigator.contacts.pickContact(function(contact)
         {
-            var contactinfo = "";
-            contactinfo += "Contact Name: " + contact.name.givenName + " " + contact.name.familyName + "<br>";
+            var contactinfo = "Contact Name: ";
+            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
             var count = 0;
             if(contact.phoneNumbers !== null)
             {
