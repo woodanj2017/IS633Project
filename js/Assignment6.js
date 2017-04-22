@@ -536,7 +536,7 @@ function SearchContacts()
 {
     var options = new ContactFindOptions();
     options.filter = "Aldrige";
-    var fields = "familyName";
+    filter = "familyName";
     navigator.contacts.find(filter, onSuccess, onError, options);
 }
 
