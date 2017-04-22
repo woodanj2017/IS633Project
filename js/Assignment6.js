@@ -536,20 +536,15 @@ function SearchContacts()
 {
     var options = new ContactFindOptions();
     options.filter = "Aldridge";
-    filter = ["familyName", "phoneNumbers"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    options.multiple = true;
+    options.desiredFields = ["familyName", "phoneNumbers"];
+    var fields = ["familyName", "phoneNumbers"];
+    navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
 function onSuccess(contacts)
 {
-    for(var i=0; i<contacts.length; i++)
-    {
-        for(var j=0; j<contacts[i].phoneNumbers.length; j++)
-        {
-            alert("Type: " + contacts[i].phoneNumbers[j].type + "\n" +
-                    "Value: " + contacts[i].phoneNumbers[j].value);
-        }
-    }
+    alert('Found ' + contacts.length + ' contacts.');
 }
 
 function onError(contactError)
