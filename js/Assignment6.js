@@ -534,33 +534,26 @@ function PickContact()
 
 function SearchContacts()
 {
-    navigator.contacts.find(function(contact)
+    var options = new ContactFindOptions();
+    options.filter = "Aldrige";
+    var fields = "familyName";
+    navigator.contacts.find(filter, onSuccess, onError, options);
+}
+
+function onSuccess(contacts)
+{
+    for(var count=0; count<contacts.length; count++)
+    {
+        for(var j=0; j<contacts[count].phoneNumbers.length; j++)
         {
-            var options = new ContactFindOptions();
-            options.filter = "Aldridge";
-            options.multiple = true;
-            options.desiredFields = [navigator.contacts.fieldType.familyName];
-            var contactinfo = "Contact Name: ";
-            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
-            var count = 0;
-            if(contact.phoneNumbers !== null)
-            {
-                for(count=0; count < contact.phoneNumbers.length; count++)
-                {
-                    contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
-                }
-            }
-            if(contact.emails !== null)
-            {
-                for(count=0; count < contact.emails.length; count++)
-                {
-                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
-                }
-            }
-//            document.getElementById("contactname").style.visibility = "visible";
-            document.getElementById("contactsearchresults").innerHTML = contactinfo;
-        }, function(err)
-           {
-            alert("Error: " + err);
-           });
+            alert("Type: " + contacts[count].phoneNumbers[j].type + "\n" +
+                    "Value: " + contacts[count].phoneNumbers[j].value + "\n" +
+                    "Preferred: " + contacts[count].phoneNumbers[j].pref);
+        }
+    }
+}
+
+function onError(contactError)
+{
+    alert('onError!');
 }
