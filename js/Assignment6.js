@@ -524,6 +524,10 @@ function PickContact()
                     contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
                 }
             }
+            document.getElementById("contname").style.visibility = "visible";
+            document.getElementById("contname").style.display = "block";
+            document.getElementById("contactname").style.visibility = "visible";
+            document.getElementById("contactname").style.display = "block";
             document.getElementById("contactname").innerHTML = contactinfo;
         }, function(err)
            {
