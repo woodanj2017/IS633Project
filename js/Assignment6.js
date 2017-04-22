@@ -524,9 +524,8 @@ function PickContact()
                     contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
                 }
             }
-            document.getElementById("contname").style.visibility = "visible";
             document.getElementById("contactname").style.visibility = "visible";
-            document.getElementById("contactname").innerHTML = contactinfo;
+            document.getElementById("contactname").innerHTML = "Contact Name: " + contactinfo;
         }, function(err)
            {
             alert("Error: " + err);
