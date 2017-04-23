@@ -544,7 +544,7 @@ function SearchContacts()
 
 function onSuccess(contacts)
 {
-    alert('Found ' + navigator.contacts.fieldType.name.value + ' contacts.');
+    alert('Found ' + contacts.length + ' contacts.');
 }
 
 function onError(contactError)
