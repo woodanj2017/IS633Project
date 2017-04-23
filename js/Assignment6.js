@@ -544,10 +544,12 @@ function SearchContacts()
 
 function onSuccess(contacts)
 {
+    var contactinfo = "Contact Name: ";
     for(var count=0; count<contacts.length; count++)
     {
-        alert("Contact Name: " + contacts[count].name.givenName + " " + contacts[count].name.familyName);
+        contactinfo += contacts[count].name.givenName + " " + contacts[count].name.familyName + "<br>";
     }
+    document.getElementById("contactsearchresults").innerHTML = contactinfo;
 }
 
 function onError(contactError)
