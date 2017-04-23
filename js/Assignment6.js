@@ -535,7 +535,7 @@ function PickContact()
 function SearchContacts()
 {
     var options = new ContactFindOptions();
-    options.filter = "Aldridge";
+    options.filter = document.getElementById("contactlastname").value;
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.name];
     var fields = [navigator.contacts.fieldType.name];
