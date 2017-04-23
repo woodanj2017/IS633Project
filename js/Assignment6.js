@@ -537,14 +537,14 @@ function SearchContacts()
     var options = new ContactFindOptions();
     options.filter = "Aldridge";
     options.multiple = true;
-    options.desiredFields = [navigator.contacts.fieldType.id];
-    var fields = [navigator.contacts.fieldType.familyName];
+    options.desiredFields = [navigator.contacts.fieldType.name];
+    var fields = [navigator.contacts.fieldType.name];
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
 function onSuccess(contacts)
 {
-    alert('Found ' + contacts.length + ' contacts.');
+    alert('Found ' + navigator.contacts.name.value + ' contacts.');
 }
 
 function onError(contactError)
