@@ -544,7 +544,10 @@ function SearchContacts()
 
 function onSuccess(contacts)
 {
-    alert('Found ' + contacts.length + ' contacts.');
+    for(var count=0; count<contacts.length; count++)
+    {
+        alert("Contact Name: " + contacts[count].name.givenName + " " + contacts[count].name.familyName);
+    }
 }
 
 function onError(contactError)
