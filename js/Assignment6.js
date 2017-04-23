@@ -544,7 +544,7 @@ function SearchContacts()
 
 function onSuccess(contacts)
 {
-    var contactinfo = "Contact Name: ";
+    var contactinfo = "Contact Names: " + "<br>";
     for(var count=0; count<contacts.length; count++)
     {
         contactinfo += contacts[count].name.givenName + " " + contacts[count].name.familyName + "<br>";
