@@ -538,7 +538,7 @@ function SearchContacts()
     options.filter = "Aldridge";
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.id];
-    var fields = [navigator.contacts.fieldType.familyName, navigator.contacts.fieldType.name];
+    var fields = [navigator.contacts.fieldType.familyName];
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
