@@ -484,23 +484,23 @@ function showPosition(position)
     document.getElementById("longitude").innerHTML = longitudelabel;
 }
 
-//function CapturePhoto()
-//{
-//    navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
-//}
-//
-//function onSuccess(imageURI)
-//{
-//    var picdisplay = document.getElementById("snapshot");
-//    picdisplay.style.visibility = "visible";
-//    picdisplay.style.display = "block";
-//    picdisplay.src = imageURI;
-//}
-//
-//function onFail(message)
-//{
-//    alert("Failed because: " + message);
-//}
+function CapturePhoto()
+{
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
+}
+
+function onSuccess(imageURI)
+{
+    var picdisplay = document.getElementById("snapshot");
+    picdisplay.style.visibility = "visible";
+    picdisplay.style.display = "block";
+    picdisplay.src = imageURI;
+}
+
+function onFail(message)
+{
+    alert("Failed because: " + message);
+}
 
 function PickContact()
 {
