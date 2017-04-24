@@ -42,6 +42,8 @@ table, th, td {border: 1px solid black; background-color: #F5F5F5; text-align: c
 
 #searchcontacts {margin-left: 10px;}
 
+#contatcsearchresults {visibility: hidden;}
+
 footer {text-align: center;}
 
 @media only screen
