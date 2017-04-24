@@ -489,7 +489,7 @@ function CapturePhoto()
     navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
 }
 
-function onSuccess(imageURl)
+function onSuccess(imageURI)
 {
     var picdisplay = document.getElementById("snapshot");
 //    document.getElementById("snapshot").style.visibility = "visible";
