@@ -486,7 +486,7 @@ function showPosition(position)
 
 function CapturePhoto()
 {
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URl, saveToPhotoAlbum: true });
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
 }
 
 function onSuccess(imageURl)
@@ -494,9 +494,9 @@ function onSuccess(imageURl)
     var picdisplay = document.getElementById("snapshot");
 //    document.getElementById("snapshot").style.visibility = "visible";
 //    document.getElementById("snapshot").style.display = "block";
-//    picdisplay.style.visibility = "visible";
-//    picdisplay.style.display = "block";
-    picdisplay.src = imageURl;
+    picdisplay.style.visibility = "visible";
+    picdisplay.style.display = "block";
+    picdisplay.src = imageURI;
 }
 
 function onFail(message)
