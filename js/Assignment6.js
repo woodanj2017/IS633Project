@@ -492,8 +492,6 @@ function CapturePhoto()
 function onSuccess(imageURI)
 {
     var picdisplay = document.getElementById("snapshot");
-//    document.getElementById("snapshot").style.visibility = "visible";
-//    document.getElementById("snapshot").style.display = "block";
     picdisplay.style.visibility = "visible";
     picdisplay.style.display = "block";
     picdisplay.src = imageURI;
