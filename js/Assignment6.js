@@ -502,57 +502,57 @@ function onFail(message)
     alert("Failed because: " + message);
 }
 
-function PickContact()
+//function PickContact()
+//{
+//    navigator.contacts.pickContact(function(contact)
+//        {
+//            var contactinfo = "Contact Name: ";
+//            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
+//            var count = 0;
+//            if(contact.phoneNumbers !== null)
+//            {
+//                for(count=0; count < contact.phoneNumbers.length; count++)
+//                {
+//                    contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
+//                }
+//            }
+//            if(contact.emails !== null)
+//            {
+//                for(count=0; count < contact.emails.length; count++)
+//                {
+//                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
+//                }
+//            }
+//            //document.getElementById("contactname").style.visibility = "visible";
+//            document.getElementById("contactname").innerHTML = contactinfo;
+//        }, function(err)
+//           {
+//            alert("Error: " + err);
+//           });
+//}
+
+function SearchContacts()
 {
-    navigator.contacts.pickContact(function(contact)
-        {
-            var contactinfo = "Contact Name: ";
-            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
-            var count = 0;
-            if(contact.phoneNumbers !== null)
-            {
-                for(count=0; count < contact.phoneNumbers.length; count++)
-                {
-                    contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
-                }
-            }
-            if(contact.emails !== null)
-            {
-                for(count=0; count < contact.emails.length; count++)
-                {
-                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
-                }
-            }
-            //document.getElementById("contactname").style.visibility = "visible";
-            document.getElementById("contactname").innerHTML = contactinfo;
-        }, function(err)
-           {
-            alert("Error: " + err);
-           });
+    var options = new ContactFindOptions();
+    options.filter = document.getElementById("contactlastname").value;
+    options.multiple = true;
+    options.desiredFields = [navigator.contacts.fieldType.name];
+    var fields = [navigator.contacts.fieldType.name];
+    navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
-//function SearchContacts()
-//{
-//    var options = new ContactFindOptions();
-//    options.filter = document.getElementById("contactlastname").value;
-//    options.multiple = true;
-//    options.desiredFields = [navigator.contacts.fieldType.name];
-//    var fields = [navigator.contacts.fieldType.name];
-//    navigator.contacts.find(fields, onSuccess, onError, options);
-//}
-//
-//function onSuccess(contacts)
-//{
-//    var contactinfo = "Contact Names: " + "<br>";
-//    for(var count=0; count<contacts.length; count++)
-//    {
-//        contactinfo += contacts[count].name.givenName + " " + contacts[count].name.familyName + "<br>";
-//    }
-//    //document.getElementById("contactsearchresults").style.visibility = "visible";
-//    document.getElementById("contactsearchresults").innerHTML = contactinfo;
-//}
-//
-//function onError(contactError)
-//{
-//    alert('onError!');
+function onSuccess(contacts)
+{
+    var contactinfo = "Contact Names: " + "<br>";
+    for(var count=0; count<contacts.length; count++)
+    {
+        contactinfo += contacts[count].name.givenName + " " + contacts[count].name.familyName + "<br>";
+    }
+    //document.getElementById("contactsearchresults").style.visibility = "visible";
+    document.getElementById("contactsearchresults").innerHTML = contactinfo;
+}
+
+function onError(contactError)
+{
+    alert('onError!');
 }
