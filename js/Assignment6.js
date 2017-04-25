@@ -523,7 +523,7 @@ function PickContact()
                     contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
                 }
             }
-            //document.getElementById("contactname").style.visibility = "visible";
+            document.getElementById("contactname").style.visibility = "visible";
             document.getElementById("contactname").innerHTML = contactinfo;
         }, function(err)
            {
@@ -531,15 +531,15 @@ function PickContact()
            });
 }
 
-function SearchContacts()
-{
-    var options = new ContactFindOptions();
-    options.filter = document.getElementById("contactlastname").value;
-    options.multiple = true;
-    options.desiredFields = [navigator.contacts.fieldType.name];
-    var fields = [navigator.contacts.fieldType.name];
-    navigator.contacts.find(fields, onSuccess, onError, options);
-}
+//function SearchContacts()
+//{
+//    var options = new ContactFindOptions();
+//    options.filter = document.getElementById("contactlastname").value;
+//    options.multiple = true;
+//    options.desiredFields = [navigator.contacts.fieldType.name];
+//    var fields = [navigator.contacts.fieldType.name];
+//    navigator.contacts.find(fields, onSuccess, onError, options);
+//}
 //
 //function onSuccess(contacts)
 //{
