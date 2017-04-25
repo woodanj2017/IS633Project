@@ -502,44 +502,44 @@ function onFail(message)
     alert("Failed because: " + message);
 }
 
-//function PickContact()
-//{
-//    navigator.contacts.pickContact(function(contact)
-//        {
-//            var contactinfo = "Contact Name: ";
-//            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
-//            var count = 0;
-//            if(contact.phoneNumbers !== null)
-//            {
-//                for(count=0; count < contact.phoneNumbers.length; count++)
-//                {
-//                    contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
-//                }
-//            }
-//            if(contact.emails !== null)
-//            {
-//                for(count=0; count < contact.emails.length; count++)
-//                {
-//                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
-//                }
-//            }
-//            //document.getElementById("contactname").style.visibility = "visible";
-//            document.getElementById("contactname").innerHTML = contactinfo;
-//        }, function(err)
-//           {
-//            alert("Error: " + err);
-//           });
-//}
-//
-//function SearchContacts()
-//{
-//    var options = new ContactFindOptions();
-//    options.filter = document.getElementById("contactlastname").value;
-//    options.multiple = true;
-//    options.desiredFields = [navigator.contacts.fieldType.name];
-//    var fields = [navigator.contacts.fieldType.name];
-//    navigator.contacts.find(fields, onSuccess, onError, options);
-//}
+function PickContact()
+{
+    navigator.contacts.pickContact(function(contact)
+        {
+            var contactinfo = "Contact Name: ";
+            contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
+            var count = 0;
+            if(contact.phoneNumbers !== null)
+            {
+                for(count=0; count < contact.phoneNumbers.length; count++)
+                {
+                    contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
+                }
+            }
+            if(contact.emails !== null)
+            {
+                for(count=0; count < contact.emails.length; count++)
+                {
+                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
+                }
+            }
+            //document.getElementById("contactname").style.visibility = "visible";
+            document.getElementById("contactname").innerHTML = contactinfo;
+        }, function(err)
+           {
+            alert("Error: " + err);
+           });
+}
+
+function SearchContacts()
+{
+    var options = new ContactFindOptions();
+    options.filter = document.getElementById("contactlastname").value;
+    options.multiple = true;
+    options.desiredFields = [navigator.contacts.fieldType.name];
+    var fields = [navigator.contacts.fieldType.name];
+    navigator.contacts.find(fields, onSuccess, onError, options);
+}
 //
 //function onSuccess(contacts)
 //{
