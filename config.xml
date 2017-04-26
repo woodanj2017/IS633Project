@@ -36,6 +36,6 @@
 </platform>
 <preference name="SplashScreenDelay" value="3000" />
 <plugin name="cordova-plugin-camera" source="npm" />
-<plugin name="cordova-plugin-contacts" source="npm" />
+<plugin name="cordova-plugin-calendar" source="npm" />
 
 </widget>
