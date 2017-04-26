@@ -572,3 +572,8 @@ function onIssue(contactError)
 {
     alert('onIssue!');
 }
+
+function CreateCalEvent();
+{
+    window.plugins.calendar.createEventInteractively();
+}
