@@ -575,6 +575,6 @@ function onIssue(contactError)
 
 function CreateCalEvent();
 {
-    var event = new Date(new Date().getTime() + 3*24*60*60*1000);
-    navigator.calendar.openCalendar(event, success, error);
+    var calevent = new Date(new Date().getTime() + 3*24*60*60*1000);
+    navigator.calendar.openCalendar(calevent, good, bad);
 }
