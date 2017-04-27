@@ -578,15 +578,10 @@ function GetCurrentDirection()
     navigator.compass.getCurrentHeading(compassSuccess, compassError);
 }
 
-function compassSuccess(heading)
-{
-    var currentdirection = document.getElementById("currentdirection");
-    currentdirection.style.visibility = "visible";
-    currentdirection.style.display = "block";
-    currentdirection.innerHTML = "Direction: " + heading.magneticHeading;
+function good(heading) {
+    alert('Heading: ' + heading.magneticHeading);
 }
 
-function compassError(error)
-{
-    alert("Error: " + error.code);
+function bad(error) {
+    alert('CompassError: ' + error.code);
 }
