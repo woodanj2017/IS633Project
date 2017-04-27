@@ -591,3 +591,8 @@ function compassError(error)
 {
     alert('CompassError: ' + error.code);
 }
+
+function onBatteryStatus(status)
+{
+    alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);
+}
