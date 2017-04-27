@@ -77,7 +77,7 @@ function MenuChoice(selection)
             document.getElementById("section8").style.display = "block";
             document.getElementById("section8").style.position = "relative";
             break;
-        case "Calendar":
+        case "Compass":
             document.getElementById("section9").style.visibility = "visible";
             document.getElementById("section9").style.display = "block";
             document.getElementById("section9").style.position = "relative";
