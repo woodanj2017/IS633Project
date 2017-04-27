@@ -48,7 +48,7 @@ table, th, td {border: 1px solid black; background-color: #F5F5F5; text-align: c
 
 #contatcsearchresults {visibility: hidden;}
 
-#currentdirection {visibility: hidden;}
+#currentdirection {visibility: hidden; display: none;}
 
 footer {text-align: center;}
 

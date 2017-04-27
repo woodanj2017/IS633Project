@@ -583,6 +583,7 @@ function compassSuccess(heading)
 //    alert('Heading: ' + heading.magneticHeading);
     var headingdisplay = "Direction: " + heading.magneticHeading;
     document.getElementById("currentdirection").style.visibility = "visible";
+    document.getElementById("currentdirection").style.display = "block";
     document.getElementById("currentdirection").innerHTML = headingdisplay;
 }
 
