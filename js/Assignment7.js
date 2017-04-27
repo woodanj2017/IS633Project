@@ -82,7 +82,7 @@ function MenuChoice(selection)
             document.getElementById("section9").style.display = "block";
             document.getElementById("section9").style.position = "relative";
             break;
-        case "Alarm":
+        case "Battery Status":
             document.getElementById("section10").style.visibility = "visible";
             document.getElementById("section10").style.display = "block";
             document.getElementById("section10").style.position = "relative";
