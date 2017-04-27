@@ -36,9 +36,6 @@
 </platform>
 <preference name="SplashScreenDelay" value="3000" />
 <plugin name="cordova-plugin-camera" source="npm" />
-<plugin name="cordova-plugin-calendar" source="npm" />
-<feature name="Calendar">
-    <param name="ios-package" value="Calendar" />
-</feature>
+<plugin name="cordova-plugin-device-orientation" source="npm />
 
 </widget>

@@ -573,8 +573,20 @@ function onIssue(contactError)
     alert('onIssue!');
 }
 
-function CreateCalEvent();
+function GetCurrentDirection()
 {
-    var calevent = new Date(new Date().getTime() + 3*24*60*60*1000);
-    navigator.calendar.openCalendar(calevent, good, bad);
+    navigator.compass.getCurrentHeading(compassSuccess, compassError);
+}
+
+function compassSuccess(heading)
+{
+    var currentdirection = document.getElementById("currentdirection");
+    currentdirection.style.visibility = "visible";
+    currentdirection.style.display = "block";
+    currentdirection.innerHTML = "Direction: " + heading.magneticheading;
+}
+
+function compassError(error)
+{
+    alert("Error: " + error.code);
 }
