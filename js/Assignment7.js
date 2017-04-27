@@ -578,7 +578,7 @@ function GetCurrentDirection()
     navigator.compass.getCurrentHeading(compassSuccess, compassError);
 }
 
-function compassSuccess(heading)
+function good(heading)
 {
     var currentdirection = document.getElementById("currentdirection");
     currentdirection.style.visibility = "visible";
@@ -586,7 +586,7 @@ function compassSuccess(heading)
     currentdirection.innerHTML = "Direction: " + heading.magneticHeading;
 }
 
-function compassError(error)
+function bad(error)
 {
     alert("Error: " + error.code);
 }
