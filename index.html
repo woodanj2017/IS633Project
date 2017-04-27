@@ -10,6 +10,7 @@
         var objContact;
         var picturesource;
         var destinationtype;
+        var compassheading
         
         document.addEventListener("deviceready",onDeviceReady,false);
         
@@ -18,8 +19,11 @@
             picturesource = navigator.camera.PictureSourceType;
             destinationtype = navigator.camera.DestinationType;
             objContact = navigator.contacts.create();
-            console.log(navigator.compass);
+            compassheading = navigator.compass;
         }
+    </script>
+    <script>
+        
     </script>
 </head>
 
@@ -152,7 +156,7 @@
     </section>
     <section id="section9">
         <h2>Current Direction</h2>
-        <button onclick="GetCurrentDirection)">Get Current Direction</button>
+        <button onclick="GetCurrentDirection()">Get Current Direction</button>
         <br>
         <br>
         <label id="currentdirection"</label>
