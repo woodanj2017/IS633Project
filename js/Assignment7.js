@@ -580,7 +580,10 @@ function GetCurrentDirection()
 
 function compassSuccess(heading)
 {
-    alert('Heading: ' + heading.magneticHeading);
+//    alert('Heading: ' + heading.magneticHeading);
+    var headingdisplay = heading.magneticHeading;
+    document.getElementById("currentdirection").style.visibility = "visible";
+    document.getElementById("currentdirection").innerHTML = headingdisplay;
 }
 
 function compassError(error)
