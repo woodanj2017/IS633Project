@@ -598,6 +598,9 @@ function GetBatteryStatus()
 
 function onBatteryStatus(status)
 {
-//    alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);
-    alert("Battery Level: " + status.level + "%")
+//    alert("Battery Level: " + status.level + "%")
+    var batstat = "Battery Level: " + status.level + "%";
+    document.getElementById("batterystatusdisplay").style.visibility = "visible";
+    document.getElementById("batterystatusdisplay").style.display = "block";
+    document.getElementById("batterystatusdisplay").innerHTML = batstat;
 }
