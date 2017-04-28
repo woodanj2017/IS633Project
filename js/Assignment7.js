@@ -580,7 +580,6 @@ function GetCurrentDirection()
 
 function compassSuccess(heading)
 {
-//    alert('Heading: ' + heading.magneticHeading);
     var headingdisplay = "Direction: " + heading.magneticHeading;
     document.getElementById("currentdirection").style.visibility = "visible";
     document.getElementById("currentdirection").style.display = "block";
@@ -599,5 +598,9 @@ function GetBatteryStatus()
 
 function onBatteryStatus(status)
 {
-    alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);
+//    alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);
+    var batterystatusdisplay = "Battery Level: " + status.level + "%  Is Plugged In: " + status.isPlugged;
+    document.getElementById("batterystatus").style.visibility = "visible";
+    document.getElementById("batterystatus").style.display = "block";
+    document.getElementById("batterystatus").innerHTML = batterystatusdisplay;
 }
