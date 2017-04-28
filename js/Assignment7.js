@@ -593,7 +593,7 @@ function compassError(error)
 
 function GetBatteryStatus()
 {
-    window.addEventListener("batterystatus",onBatteryStatus,false);
+    document.addEventListener("batterystatus",onBatteryStatus,false);
 }
 
 function onBatteryStatus(status)
