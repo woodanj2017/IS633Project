@@ -594,8 +594,10 @@ function compassError(error)
 
 function GetBatteryStatus()
 {
-    document.getElementById("getbatterystatusbutton").window.addEventListener("batterystatus",function(onBatteryStatus)
-    {
-      alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);  
-    },false);
+    window.addEventListener("batterystatus",onBatteryStatus,false);
+}
+
+function onBatteryStatus(status)
+{
+    alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);
 }
