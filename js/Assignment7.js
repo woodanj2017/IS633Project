@@ -593,14 +593,10 @@ function compassError(error)
 
 function GetBatteryStatus()
 {
-    document.addEventListener("batterystatus",onBatteryStatus,false);
+    window.addEventListener("batterystatus",onBatteryStatus,false);
 }
 
 function onBatteryStatus(status)
 {
-//    alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);
-    var batterystatusdisplay = "Battery Level: " + status.level + "%  Is Plugged In: " + status.isPlugged;
-    document.getElementById("batterystatus").style.visibility = "visible";
-    document.getElementById("batterystatus").style.display = "block";
-    document.getElementById("batterystatus").innerHTML = batterystatusdisplay;
+    alert("Level: " + status.level + " Is Plugged In: " + status.isPlugged);
 }
